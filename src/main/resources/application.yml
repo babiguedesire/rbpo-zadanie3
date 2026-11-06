@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: "1Бас24036"
+  datasource:
+    # Параметры подключения берутся из переменных окружения (секреты не хранятся в коде)
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/repair_db}
+    username: ${DB_USERNAME:app_user}
+    password: ${DB_PASSWORD:app_password}
+  jpa:
+    hibernate:
+      # Схема создаётся SQL-скриптами (db/init), Hibernate только проверяет соответствие
+      ddl-auto: validate
+    open-in-view: false

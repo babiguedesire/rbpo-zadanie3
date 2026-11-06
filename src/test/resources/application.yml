@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:repair;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      # В тестах схема создаётся из JPA-сущностей
+      ddl-auto: create-drop
+    open-in-view: false
